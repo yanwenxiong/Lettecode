@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.tju.se.leetcode.Battleships;
+import com.tju.se.leetcode.CanPlaceFlowers;
 import com.tju.se.leetcode.FindMedian;
 import com.tju.se.leetcode.MaximumAverageSubarrayI;
 import com.tju.se.leetcode.SearchInsertPosition;
@@ -49,10 +50,15 @@ public class Main {
 		System.out.println(bean.searchInsert(nums, 7));
 		System.out.println(bean.searchInsert(nums, 0));*/
 		
-		int[] nums = {1,12,-5,-6,50,3};
+		/*int[] nums = {1,12,-5,-6,50,3};
 		int[] nums1 = {0,4,0,3,2};
 		MaximumAverageSubarrayI bean = new MaximumAverageSubarrayI();
-		System.out.println(bean.findMaxAverage(nums1, 1));
+		System.out.println(bean.findMaxAverage(nums1, 1));*/
+		
+		int[] nums = {1,0,0,0,1,0,0};
+		int n = 2;
+		CanPlaceFlowers bean = new CanPlaceFlowers();
+		System.out.println(bean.canPlaceFlowers(nums, n));
 	}
 
 }
