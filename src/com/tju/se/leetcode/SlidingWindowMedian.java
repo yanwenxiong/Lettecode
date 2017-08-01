@@ -6,7 +6,7 @@ import java.util.List;
 
 public class SlidingWindowMedian {
 	public double[] medianSlidingWindow(int[] nums, int k) {
-		int len = nums.length-k+1,length = nums.length;
+		int len = nums.length-k+1;
 		double[] result = new double[len];
 
 		List<Integer> list = new ArrayList<Integer>();
@@ -33,12 +33,6 @@ public class SlidingWindowMedian {
 		return result;
 	}
 	
-	private void output(List<Integer> list){
-		for(Integer it : list){
-			System.out.print(it + " ");
-		}
-		System.out.println();
-	}
 	private double median(List<Integer> list,int offset) {
 		if (offset % 2 == 1) {
 			return list.get(offset / 2);
