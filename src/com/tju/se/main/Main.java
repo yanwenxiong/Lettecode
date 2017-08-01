@@ -104,9 +104,11 @@ public class Main {
 		ShortestUnsortedContinuousSubarray bean = new ShortestUnsortedContinuousSubarray();
 		System.out.println(bean.findUnsortedSubarray(nums));*/
 		
-		ArrayNesting bean = new ArrayNesting();
-		int[] nums = {0,1,2,4,3};
-		System.out.println(bean.arrayNesting(nums));
+		/*ArrayNesting bean = new ArrayNesting();
+		int[] nums = {1,2,0};
+		System.out.println(bean.arrayNesting(nums));*/
+		
+		
 	}
 	
 	
