@@ -5,11 +5,13 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.tju.se.leetcode.ArrayNesting;
 import com.tju.se.leetcode.Battleships;
 import com.tju.se.leetcode.CanPlaceFlowers;
 import com.tju.se.leetcode.FindMedian;
 import com.tju.se.leetcode.MaximumAverageSubarrayI;
 import com.tju.se.leetcode.SearchInsertPosition;
+import com.tju.se.leetcode.ShortestUnsortedContinuousSubarray;
 import com.tju.se.leetcode.SlidingWindowMedian;
 import com.tju.se.leetcode.ValidTriangleNumber;
 
@@ -97,6 +99,14 @@ public class Main {
 		/*ValidTriangleNumber bean = new ValidTriangleNumber();
 		int[] nums = {2,2,3,4};
 		System.out.println(bean.triangleNumber(nums));*/
+		
+		/*int[] nums = {2,1};
+		ShortestUnsortedContinuousSubarray bean = new ShortestUnsortedContinuousSubarray();
+		System.out.println(bean.findUnsortedSubarray(nums));*/
+		
+		ArrayNesting bean = new ArrayNesting();
+		int[] nums = {0,1,2,4,3};
+		System.out.println(bean.arrayNesting(nums));
 	}
 	
 	
