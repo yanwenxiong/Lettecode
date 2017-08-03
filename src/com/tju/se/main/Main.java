@@ -8,15 +8,20 @@ import java.util.List;
 import com.tju.se.leetcode.ArrayNesting;
 import com.tju.se.leetcode.Battleships;
 import com.tju.se.leetcode.CanPlaceFlowers;
+import com.tju.se.leetcode.FindAllDuplicatesinanArray;
 import com.tju.se.leetcode.FindAllNumbersDisappearedinanArray;
 import com.tju.se.leetcode.FindMedian;
+import com.tju.se.leetcode.InsertDeleteGetRandomO1;
 import com.tju.se.leetcode.KdiffPairsinanArray;
 import com.tju.se.leetcode.MaxConsecutiveOnes;
 import com.tju.se.leetcode.MaximumAverageSubarrayI;
+import com.tju.se.leetcode.MoveZeroes;
 import com.tju.se.leetcode.SearchInsertPosition;
 import com.tju.se.leetcode.ShortestUnsortedContinuousSubarray;
 import com.tju.se.leetcode.SlidingWindowMedian;
 import com.tju.se.leetcode.SubarraySumEqualsK;
+import com.tju.se.leetcode.TeemoAttacking;
+import com.tju.se.leetcode.ThirdMaximumNumber;
 import com.tju.se.leetcode.ValidTriangleNumber;
 
 public class Main {
@@ -126,10 +131,38 @@ public class Main {
 		MaxConsecutiveOnes bean = new MaxConsecutiveOnes();
 		System.out.println(bean.findMaxConsecutiveOnes(nums));*/
 		
-		int[] nums = {4,3,2,7,8,2,3,1};
+		/*int[] nums = {4,3,2,7,8,2,3,1};
 		FindAllNumbersDisappearedinanArray bean = new FindAllNumbersDisappearedinanArray();
-		System.out.println(bean.findDisappearedNumbers(nums));
+		System.out.println(bean.findDisappearedNumbers(nums));*/
 		
+		/*int[] nums = {4,3,2,7,8,2,3,1};
+		FindAllDuplicatesinanArray bean = new FindAllDuplicatesinanArray();
+		System.out.println(bean.findDuplicates(nums));*/
+		
+		/*int[] nums = {1,1,2};
+		ThirdMaximumNumber bean = new ThirdMaximumNumber();
+		System.out.println(bean.thirdMax(nums));*/
+		
+		/*InsertDeleteGetRandomO1 obj = new InsertDeleteGetRandomO1();
+		System.out.println(obj.insert(1));
+		System.out.println(obj.insert(10));
+		System.out.println(obj.insert(20));
+		System.out.println(obj.insert(30));
+		System.out.println(obj.getRandom());
+		System.out.println(obj.getRandom());
+		System.out.println(obj.getRandom());
+		System.out.println(obj.getRandom()); 
+		System.out.println(obj.getRandom());*/
+		
+		/*int[] nums = {1,2,5,6,8};
+		int duration = 2;
+		TeemoAttacking bean = new TeemoAttacking();
+		System.out.println(bean.findPoisonedDuration(nums, duration));*/
+		
+		int[] nums = {0,1,2,0,2};
+		MoveZeroes bean = new MoveZeroes();
+		bean.moveZeroes(nums);
+		outputArray(nums);
 	}
 	
 	
