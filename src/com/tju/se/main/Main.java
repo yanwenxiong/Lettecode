@@ -165,9 +165,11 @@ public class Main {
 		bean.moveZeroes(nums);
 		outputArray(nums);*/
 		
-		int[] nums = {2,1,3};
+		/*int[] nums = {2,1,3};
 		MissingNumber bean = new MissingNumber();
-		System.out.println(bean.missingNumber(nums));
+		System.out.println(bean.missingNumber(nums));*/
+		
+		
 	}
 	
 	
