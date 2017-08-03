@@ -15,6 +15,7 @@ import com.tju.se.leetcode.InsertDeleteGetRandomO1;
 import com.tju.se.leetcode.KdiffPairsinanArray;
 import com.tju.se.leetcode.MaxConsecutiveOnes;
 import com.tju.se.leetcode.MaximumAverageSubarrayI;
+import com.tju.se.leetcode.MissingNumber;
 import com.tju.se.leetcode.MoveZeroes;
 import com.tju.se.leetcode.SearchInsertPosition;
 import com.tju.se.leetcode.ShortestUnsortedContinuousSubarray;
@@ -159,10 +160,14 @@ public class Main {
 		TeemoAttacking bean = new TeemoAttacking();
 		System.out.println(bean.findPoisonedDuration(nums, duration));*/
 		
-		int[] nums = {0,1,2,0,2};
+		/*int[] nums = {0,0,0,0,1,1,2,0,2,65,0};
 		MoveZeroes bean = new MoveZeroes();
 		bean.moveZeroes(nums);
-		outputArray(nums);
+		outputArray(nums);*/
+		
+		int[] nums = {2,1,3};
+		MissingNumber bean = new MissingNumber();
+		System.out.println(bean.missingNumber(nums));
 	}
 	
 	
