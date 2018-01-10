@@ -1,29 +1,11 @@
 package com.tju.se.main;
 
-import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
-import com.tju.se.leetcode.ArrayNesting;
-import com.tju.se.leetcode.Battleships;
-import com.tju.se.leetcode.CanPlaceFlowers;
-import com.tju.se.leetcode.FindAllDuplicatesinanArray;
-import com.tju.se.leetcode.FindAllNumbersDisappearedinanArray;
-import com.tju.se.leetcode.FindMedian;
-import com.tju.se.leetcode.InsertDeleteGetRandomO1;
-import com.tju.se.leetcode.KdiffPairsinanArray;
-import com.tju.se.leetcode.MaxConsecutiveOnes;
-import com.tju.se.leetcode.MaximumAverageSubarrayI;
-import com.tju.se.leetcode.MissingNumber;
-import com.tju.se.leetcode.MoveZeroes;
-import com.tju.se.leetcode.SearchInsertPosition;
-import com.tju.se.leetcode.ShortestUnsortedContinuousSubarray;
-import com.tju.se.leetcode.SlidingWindowMedian;
-import com.tju.se.leetcode.SubarraySumEqualsK;
-import com.tju.se.leetcode.TeemoAttacking;
-import com.tju.se.leetcode.ThirdMaximumNumber;
-import com.tju.se.leetcode.ValidTriangleNumber;
+import com.tju.se.leetcode.array.A;
+import com.tju.se.leetcode.math.ReachaNumber;
 
 public class Main {
 
@@ -168,15 +150,22 @@ public class Main {
 		/*int[] nums = {2,1,3};
 		MissingNumber bean = new MissingNumber();
 		System.out.println(bean.missingNumber(nums));*/
+//		String string = "hah";
+//		System.out.println(string.split(",").length);
 		
+		testReachaNumber();
 		
 	}
-	
 	
 	public static void outputArray(int[] array){
 		for(int temp : array){
 			System.out.print(temp + " ");
 		}
 		System.out.println();
+	}
+	
+	public static void testReachaNumber() {
+		ReachaNumber reachaNumber = new ReachaNumber();
+		System.out.println(reachaNumber.reachNumber(3));
 	}
 }
