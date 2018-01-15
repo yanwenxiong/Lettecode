@@ -3,8 +3,10 @@ package com.tju.se.main;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Random;
 
 import com.tju.se.leetcode.array.A;
+import com.tju.se.leetcode.array.PourWater;
 import com.tju.se.leetcode.math.ReachaNumber;
 
 public class Main {
@@ -153,8 +155,10 @@ public class Main {
 //		String string = "hah";
 //		System.out.println(string.split(",").length);
 		
-		testReachaNumber();
-		
+//		testReachaNumber();
+//		testPourWater();
+//		LargestNumberAtLeastTwiceofOthers();
+//		MinCostClimbingStairs();
 	}
 	
 	public static void outputArray(int[] array){
@@ -167,5 +171,29 @@ public class Main {
 	public static void testReachaNumber() {
 		ReachaNumber reachaNumber = new ReachaNumber();
 		System.out.println(reachaNumber.reachNumber(3));
+	}
+	
+	public static void testPourWater() {
+//		int[] heights1 = {2,1,1,2,1,2,2};
+//		outputArray(new PourWater().pourWater(heights1, 4, 3));
+//		
+//		int[] heights2 = {1,2,3,4};
+//		outputArray(new PourWater().pourWater(heights2, 2, 2));
+		
+		int[] heights3 = {1,2,3,4,3,2,1,2,3,4,3,2,1};
+		outputArray(new PourWater().pourWater(heights3, 5, 2));
+	}
+	
+	public static void LargestNumberAtLeastTwiceofOthers() {
+		int[] nums = {0,0,2,3};
+		System.out.println(new com.tju.se.leetcode.array.LargestNumberAtLeastTwiceofOthers().dominantIndex(nums));
+	}
+	
+	public static void MinCostClimbingStairs() {
+		int[] costs1 = {10, 15, 20};
+		System.out.println(new com.tju.se.leetcode.array.MinCostClimbingStairs().minCostClimbingStairs(costs1));
+		
+		int[] costs2 = {1, 100, 1, 1, 1, 100, 1, 1, 100, 1};
+		System.out.println(new com.tju.se.leetcode.array.MinCostClimbingStairs().minCostClimbingStairs(costs2));
 	}
 }
