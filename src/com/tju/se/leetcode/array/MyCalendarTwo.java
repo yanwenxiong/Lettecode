@@ -17,51 +17,36 @@ public class MyCalendarTwo {
     }
     
     public boolean book(int start, int end) {
-    	for (Area area : doubleBooked) {
-    		if (!checkData(doubleBooked, new Area(start, end))) {
-    			return false;
-    		}
-    	}
-    	for (Area area : areas) {
-    		boolean add = false;
-    		int a, b;
-    		if (start < area.start) {
-    			if (end > area.start && end <= area.end) {
-    				a = area.start;
-    				b = end;
-    				add = true;
-    			} else if (end >= area.end) {
-    				a = area.start;
-    				b = area.end;
-    				add = true;
-    			}
-    		} else if (start >= area.start) {
-    			if (end <= area.end) {
-    				a = start;
-    				b = end;
-    				add = true;
-    			} else if (end >= area.end) {
-    				a = start;
-    				b = area.end;
-    				add = true;
-    			}
-    		}
-    		if (add) {
-    			
-    		}
-    	}
+		if (!checkData(doubleBooked, new Area(start, end))) {
+			return false;
+		} else {
+			for (Area area : areas) {
+				if (start < area.start) {
+					if (end > area.start && end <= area.end) {
+						doubleBooked.add(new Area(area.start, end));
+					} else if (end > area.start && end > area.end) {
+						doubleBooked.add(new Area(area.start, area.end));
+					}
+				} else if (start >= area.start && start < area.end) {
+					if (end <= area.end) {
+						doubleBooked.add(new Area(start, end));
+					} else if (end > area.end) {
+						doubleBooked.add(new Area(start, area.end));
+					}
+				}
+			}
+			areas.add(new Area(start, end));
+		}
     	return true;
     }
     
     public boolean checkData(List<Area> doubleAreas, Area newArea) {
     	for (Area area : doubleAreas) {
-    		if (newArea.end <= area.start) {
-    			return true;
-    		} else if (newArea.start >= newArea.end) {
-    			return true;
-    		}
+    		if (newArea.end > area.start && newArea.start < area.end) {
+    			return false;
+    		} 
     	}
-		return false;
+		return true;
     }
 }
 
@@ -74,4 +59,10 @@ class Area {
 		this.start = start;
 		this.end = end;
 	}
+
+	@Override
+	public String toString() {
+		return "Area [start=" + start + ", end=" + end + "]";
+	}
+	
 }

@@ -6,6 +6,10 @@ import java.util.List;
 import java.util.Random;
 
 import com.tju.se.leetcode.array.A;
+import com.tju.se.leetcode.array.FindPivotIndex;
+import com.tju.se.leetcode.array.MaximumLengthofRepeatedSubarray;
+import com.tju.se.leetcode.array.MyCalendar;
+import com.tju.se.leetcode.array.MyCalendarTwo;
 import com.tju.se.leetcode.array.PourWater;
 import com.tju.se.leetcode.math.ReachaNumber;
 
@@ -159,6 +163,10 @@ public class Main {
 //		testPourWater();
 //		LargestNumberAtLeastTwiceofOthers();
 //		MinCostClimbingStairs();
+//		testMyCalendarTwo();
+//		testMyCalendar();
+//		testFindPivotIndex();
+		testMaximumLengthofRepeatedSubarray();
 	}
 	
 	public static void outputArray(int[] array){
@@ -195,5 +203,57 @@ public class Main {
 		
 		int[] costs2 = {1, 100, 1, 1, 1, 100, 1, 1, 100, 1};
 		System.out.println(new com.tju.se.leetcode.array.MinCostClimbingStairs().minCostClimbingStairs(costs2));
+	}
+	
+	public static void testMyCalendarTwo() {
+	    MyCalendarTwo myCalendar = new MyCalendarTwo();
+	    System.out.println(myCalendar.book(10, 20)); // returns true
+	    System.out.println(myCalendar.book(50, 60)); // returns true
+	    System.out.println(myCalendar.book(10, 40)); // returns true
+	    System.out.println(myCalendar.book(5, 15)); // returns false
+	    System.out.println(myCalendar.book(5, 10)); // returns true
+	    System.out.println(myCalendar.book(25, 55)); // returns true
+	    System.out.println("---------------------------");
+	    MyCalendarTwo myCalendar2 = new MyCalendarTwo();
+	    System.out.println(myCalendar2.book(24, 40)); // returns true
+	    System.out.println(myCalendar2.book(43, 50)); // returns true
+	    System.out.println(myCalendar2.book(27, 43)); // returns true
+	    System.out.println(myCalendar2.book(5, 21)); // returns false
+	    System.out.println(myCalendar2.book(30, 40)); // returns true
+	    System.out.println(myCalendar2.book(14, 29)); // returns true
+	    System.out.println(myCalendar2.book(3, 19)); // returns true
+	    System.out.println(myCalendar2.book(3, 14)); // returns true
+	    System.out.println(myCalendar2.book(25, 39)); // returns true
+	    System.out.println(myCalendar2.book(6, 19)); // returns true
+	}
+	
+	public static void testMyCalendar() {
+		MyCalendar myCalendar = new MyCalendar();
+		System.out.println(myCalendar.book(10, 20));
+		System.out.println(myCalendar.book(15, 25));
+		System.out.println(myCalendar.book(20, 30));
+	}
+	
+	public static void testFindPivotIndex() {
+		int[] nums = {1, 7, 3, 6, 5, 6};
+		FindPivotIndex findPivotIndex = new FindPivotIndex();
+		System.out.println(findPivotIndex.pivotIndex(nums));
+		
+		int[] nums2 = {1, 2, 3};
+		System.out.println(findPivotIndex.pivotIndex(nums2));
+	}
+	
+	public static void testMaximumLengthofRepeatedSubarray() {
+		int[] a = {1,2,3,2,1};
+		int[] b = {3,2,1,4,7};
+		System.out.println(new MaximumLengthofRepeatedSubarray().findLength(a, b));
+		
+		int[] a1 = {0,1,1,1,1};
+		int[] b1 = {1,0,1,0,1};
+		System.out.println(new MaximumLengthofRepeatedSubarray().findLength(a1, b1));
+		
+		int[] a2 = {0,0,0,0,0,0,1,0,0,0};
+		int[] b2 = {0,0,0,0,0,0,0,1,0,0};
+		System.out.println(new MaximumLengthofRepeatedSubarray().findLength(a2, b2));
 	}
 }
