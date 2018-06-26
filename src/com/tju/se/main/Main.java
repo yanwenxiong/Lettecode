@@ -5,6 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
+import com.tju.se.explore.array.PlusOne;
 import com.tju.se.leetcode.array.A;
 import com.tju.se.leetcode.array.FindPivotIndex;
 import com.tju.se.leetcode.array.MaximumLengthofRepeatedSubarray;
@@ -166,7 +167,8 @@ public class Main {
 //		testMyCalendarTwo();
 //		testMyCalendar();
 //		testFindPivotIndex();
-		testMaximumLengthofRepeatedSubarray();
+//		testMaximumLengthofRepeatedSubarray();
+        testPlusOne();
 	}
 	
 	public static void outputArray(int[] array){
@@ -256,4 +258,18 @@ public class Main {
 		int[] b2 = {0,0,0,0,0,0,0,1,0,0};
 		System.out.println(new MaximumLengthofRepeatedSubarray().findLength(a2, b2));
 	}
+
+	public static void testPlusOne() {
+        int[] test = {9, 9, 9};
+        int[] res = new PlusOne().plusOne(test);
+        printArray(res);
+	}
+
+	private static void printArray(int[] array) {
+	    if (array != null) {
+	        for (int i = 0; i < array.length; i++) {
+	            System.out.print(array[i] + " ");
+            }
+        }
+    }
 }
